@@ -1,0 +1,647 @@
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html, body{
+    font-family: 'Fira Sans', sans-serif;
+
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+#carouselExampleIndicators {
+    position: relative;
+}
+
+
+.text .border-left {
+    position: absolute;
+    left: -2%;
+    width: 100%;
+    height: 60px;
+    z-index: -2;
+    background-color: rgba(0, 0, 0, 0.534);
+    border-left: 4px solid rgb(31, 118, 145) !important;
+}
+
+
+
+.right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 25%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.452);
+}
+
+.right-side h6 {
+    text-align: left;
+    cursor: pointer;
+}
+
+.selectors {
+    color: rgb(223, 223, 223);
+    margin-left: 10%;
+}
+
+.active {
+    color: white;
+}
+
+.bg-custom {
+    background-color: black;
+}
+
+.left-side {
+    width: 50%;
+    position: absolute;
+    z-index: 3;
+    top: 20%;
+    left: 15%;
+}
+
+.left-side>h1 {
+    font-size: 4vw;
+}
+
+.left-side p {
+    font-size: 1vw;
+}
+
+.carousel-indicators {
+    display: hidden !important;
+}
+
+.custom-card {
+    padding: 25px;
+    text-align: center;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 5px 5px 0 rgba(128, 128, 128, 0.232);
+}
+
+
+.custom-card img {
+    width: 40%;
+}
+
+.custom-card button,
+.container-xl button {
+    border-radius: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.card button {
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#services {
+    background-color: whitesmoke;
+    padding-bottom: 60px;
+}
+
+
+/* section projects */
+
+.container-xl {
+    max-width: 100%;
+}
+
+
+
+
+
+
+
+.container-xl .carousel {
+    margin: 50px auto;
+}
+
+
+.single-project {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.container-xl .carousel .item {
+    color: #747d89;
+    min-height: 325px;
+    text-align: center;
+    overflow: hidden;
+}
+
+
+
+.container-xl .carousel .thumb-wrapper {
+
+    background: transparent;
+    border-radius: 6px;
+    text-align: center;
+    position: relative;
+}
+
+.container-xl .carousel .item .img-box {
+    margin-bottom: 20px;
+    width: 100%;
+    position: relative;
+}
+
+.container-xl .carousel .item img {
+    max-width: 100%;
+    max-height: 100%;
+    display: inline-block;
+    bottom: 0;
+    margin: 0;
+    left: 0;
+    right: 0;
+}
+
+.container-xl .carousel .item h4 {
+    font-size: 18px;
+}
+
+.container-xl .carousel .item h4,
+.carousel .item p,
+.carousel .item ul {
+    margin-bottom: 5px;
+}
+
+.container-xl .carousel .thumb-content .btn {
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: none;
+    padding: 6px 14px;
+    margin-top: 5px;
+    line-height: 16px;
+    border-radius: 20px;
+}
+
+.container-xl .carousel .thumb-content .btn:hover,
+.carousel .thumb-content .btn:focus {
+    color: #fff;
+    box-shadow: none;
+}
+
+.container-xl .carousel .thumb-content .btn i {
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.container-xl .carousel .item-price {
+    font-size: 13px;
+    padding: 2px 0;
+}
+
+.container-xl .carousel .item-price strike {
+    opacity: 0.7;
+    margin-right: 5px;
+}
+
+.container-xl .carousel-control-prev,
+.container-xl .carousel-control-next {
+    height: 44px;
+    width: 40px;
+    background: grey;
+    margin: auto 0;
+    border-radius: 4px;
+    opacity: 0.8;
+}
+
+.container-xl .carousel-control-prev:hover,
+.container-xl .carousel-control-next:hover {
+    background: rgb(88, 88, 88);
+    opacity: 1;
+}
+
+.container-xl .carousel-control-prev i,
+.container-xl .carousel-control-next i {
+    font-size: 36px;
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    margin: -19px 0 0 0;
+    z-index: 5;
+    left: 0;
+    right: 0;
+    color: #fff;
+    text-shadow: none;
+    font-weight: bold;
+}
+
+.container-xl .carousel-control-prev i {
+    margin-left: -2px;
+}
+
+.container-xl .carousel-control-next i {
+    margin-right: -4px;
+}
+
+.container-xl .carousel-indicators {
+    bottom: -50px;
+}
+
+.container-xl .carousel-indicators li,
+.carousel-indicators li.active {
+    width: 10px;
+    height: 10px;
+    margin: 4px;
+    border-radius: 50%;
+    border: none;
+}
+
+.container-xl .carousel-indicators li {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.container-xl .carousel-indicators li.active {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.container-xl .carousel .wish-icon {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 99;
+    cursor: pointer;
+    font-size: 16px;
+    color: #abb0b8;
+}
+
+.container-xl .carousel .wish-icon .fa-heart {
+    color: #ff6161;
+}
+
+.container-xl .star-rating li {
+    padding: 0;
+}
+
+.container-xl .star-rating i {
+    font-size: 14px;
+    color: #ffc000;
+}
+
+
+/* section projects */
+
+
+/* start about */
+
+.card {
+    border: none;
+    box-shadow: 0 5px 5px 0 rgba(128, 128, 128, 0.232);
+}
+
+
+
+
+#about {
+    background-color: whitesmoke;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+#about .fa {
+    font-size: 3vw;
+    color: #17a2b8;
+}
+
+/* end about */
+
+
+
+
+/* animated numbers */
+
+
+.counters {
+    background-color: whitesmoke;
+    color: black !important;
+    /* Push to bottom */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.counters span {
+    font-size: 40px;
+}
+
+.counters h6 {
+    color: #17a2b8;
+}
+
+.counter {
+    display: inline-block;
+}
+
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+header {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header h1 {
+    font-size: 60px;
+}
+
+.counters {
+    color: #fff;
+    padding: 40px 20px;
+}
+
+.counters .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+    text-align: center;
+}
+
+.counters i {
+    color: lightskyblue;
+    margin-bottom: 5px;
+}
+
+.counters .counter {
+    font-size: 45px;
+    margin: 10px 0;
+}
+
+@media (max-width: 700px) {
+    .counters .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .counters .container>div:nth-of-type(1),
+    .counters .container>div:nth-of-type(2) {
+        padding-bottom: 20px;
+    }
+}
+
+/* end animated numbers */
+
+
+/* start clients */
+
+.clients-text {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: violet;
+}
+
+.myimg {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.quote {
+    font-style: italic;
+    font-weight: 400;
+
+}
+
+#clients .carousel-inner {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    min-height: 250px;
+    background-color: #1b8899;
+}
+
+#clients .left-side {
+    position: absolute;
+    width: 50%;
+    left: 25%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* end clients */
+
+
+/* grid (services) */
+
+#grid .fa {
+    font-size: 2vw;
+    color: #17a2b8;
+}
+
+/* grid (services) */
+
+
+/* start consulting */
+
+#consulting {
+    background-color: whitesmoke;
+}
+
+.consulting-inner {
+    align-items: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+/* end consulting */
+
+
+/* how we work */
+
+.outline {
+    padding: 10px;
+    height: 250px;
+    overflow: hidden;
+}
+
+.pic {
+    border: 1px solid rgba(32, 146, 175, 0.644);
+    width: 100%;
+    height: 100%;
+
+}
+
+.outline .pic img {
+    width: 100%;
+    height: 230px;
+}
+
+.pic:hover>h1 {
+    color: #71b4be;
+}
+
+.pic h1 {
+    font-weight: 1000;
+    color: #17a2b8;
+}
+
+
+.pic:hover {
+    background-color: #17a2b8;
+    color: white !important;
+}
+
+.pic:hover p{
+    color: white !important;
+}
+
+
+
+
+
+
+/* how we work */
+
+
+/* blog */
+
+#blog {
+    background-color: whitesmoke;
+    padding-bottom: 100px;
+}
+
+.blog-item {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background-position: center;
+    background-size: cover;
+}
+
+.inner-blog-data {
+    position: absolute;
+    width: 90%;
+    bottom: -50px;
+    background-color: white;
+    color: black;
+    box-shadow: 0 5px 5px 0 rgba(128, 128, 128, 0.418);
+}
+
+#blog button {
+    border-radius: 20px;
+}
+
+/* blog */
+
+
+.footer {
+    padding: 50px 0;
+}
+
+.footer p {
+    font-size: 14px;
+    color: white !important;
+}
+
+.footer h6 {
+    font-weight: bolder;
+    font-size: 18px;
+}
+
+.footer-left-column{
+    text-align: left;
+}
+
+p{
+    color: grey;
+}
+
+#carouselExampleIndicators p , #clients p{
+    color: rgb(231, 229, 229);
+}
+
+
+@media(max-width: 750px) {
+    .footer-left-column{
+        text-align: center !important;
+    }
+
+    .text .border-left{
+        display: none;
+    }
+
+    #clients .left-side{
+        padding-top: 20px;
+    }
+
+    button .fa {
+        display: none;
+    }
+
+    .fa {
+        font-size: 35px !important;
+    }
+
+    #about,
+    #grid,
+    #work {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    #clients h5 {
+        margin-top: 30px;
+    }
+
+    .carousel-indicators {
+        display: flex;
+    }
+
+    .right-side {
+        display: none;
+    }
+
+    .left-side {
+        width: 80%;
+        left: 10%;
+        right: 10%;
+    }
+
+    .left-side p {
+        display: none;
+    }
+
+    .left-side button {
+        font-size: 2vw;
+    }
+
+    .service-text {
+        text-align: center;
+    }
+
+    .service-text p {
+        text-align: center;
+    }
+
+    .service-text h2 {
+        font-size: large;
+        margin-bottom: -50px;
+    }
+
+
+}
