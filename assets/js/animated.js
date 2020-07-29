@@ -1,15 +1,11 @@
 const counters = document.querySelectorAll('.counter');
-const speed = 100; // The lower the slower
+const speed = 100; 
 
 counters.forEach(counter => {
     const updateCount = () => {
         const target = +counter.getAttribute('data-target');
         const count = +counter.innerText;
 
-        // Lower inc to slow and higher to slow
-
-        // console.log(inc);
-        // console.log(count);
 
         // Check if target is reached
         if (count < target) {
