@@ -4,10 +4,19 @@
     margin: 0;
 }
 
+.colorTheme {
+    color: #148ba9;
+}
+
+.bgTheme {
+    background-color: #148ba9;
+}
+
+
+
 html,
 body {
-    font-family: 'Fira Sans', sans-serif;
-
+    font-family: 'Poppins', sans-serif;
 }
 
 html {
@@ -16,6 +25,18 @@ html {
 
 #carouselExampleIndicators {
     position: relative;
+}
+
+#navTop {
+    padding-top: 2%;
+}
+
+.bg-custom {
+    background-color: transparent;
+}
+
+.custom-link {
+    font: normal bold 17px / 21px "Poppins", Helvetica, Arial, Verdana, sans-serif;
 }
 
 .custom-link:hover {
@@ -33,12 +54,17 @@ html {
     position: absolute;
     left: -2%;
     width: 100%;
-    height: 60px;
+    height: 20%;
     z-index: -2;
-    background-color: rgba(0, 0, 0, 0.534);
     border-left: 4px solid rgb(31, 118, 145) !important;
 }
 
+
+#carouselExampleIndicators img {
+    object-fit: cover;
+    object-position: center;
+    height: 100vh !important;
+}
 
 
 .right-side {
@@ -48,13 +74,15 @@ html {
     position: absolute;
     right: 0;
     top: 0;
-    width: 25%;
+    width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.452);
+    background-color: rgba(0, 0, 0, 0.578);
 }
 
 .right-side h6 {
     text-align: left;
+    margin-right: 10%;
+    font-size: 1.2rem;
     cursor: pointer;
 }
 
@@ -68,24 +96,43 @@ html {
 
 }
 
-.bg-custom {
-    background-color: black;
-}
+
+
+
 
 .left-side {
     width: 50%;
     position: absolute;
     z-index: 3;
     top: 20%;
-    left: 15%;
+    left: 10%;
+}
+
+.scrolled {
+    background-color: rgb(0, 0, 0) !important;
+    transition: background-color 200ms linear;
 }
 
 .left-side>h1 {
-    font-size: 4vw;
+    font-size: 6vw;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
 }
 
 .left-side p {
-    font-size: 1vw;
+    font-size: 1.1vw;
+    font-weight: 500;
+
+
+}
+
+.carousel-control-next-icon {
+    margin-left: 50px;
+}
+
+.carousel-control-prev-icon {
+    margin-right: 50px;
+
 }
 
 .carousel-indicators {
@@ -93,9 +140,9 @@ html {
 }
 
 .custom-card {
-    padding: 25px;
+    padding: 20px;
+    height: 100%;
     text-align: center;
-    border-radius: 20px;
     background-color: rgb(255, 255, 255);
     box-shadow: 0 5px 5px 0 rgba(128, 128, 128, 0.232);
 }
@@ -107,7 +154,7 @@ html {
 
 .custom-card button,
 .container-xl button {
-    border-radius: 20px;
+    border-radius: 10px;
     padding-left: 30px;
     padding-right: 30px;
 }
@@ -121,6 +168,11 @@ html {
 #services {
     background-color: whitesmoke;
     padding-bottom: 60px;
+}
+
+
+#services img {
+    width: 20%;
 }
 
 
@@ -152,6 +204,38 @@ html {
     min-height: 325px;
     text-align: center;
     overflow: hidden;
+}
+
+.box {
+    position: relative !important;
+}
+
+.overlayBlack {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.73);
+}
+
+.text2 {
+    color: white;
+    font-size: 2vw;
+    font-weight: bolder;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.box:hover>.overlayBlack {
+    opacity: 1;
+    transition: .6s ease;
 }
 
 
@@ -283,6 +367,11 @@ html {
     background: rgba(0, 0, 0, 0.6);
 }
 
+
+#services h4 {
+    font-weight: 600;
+}
+
 .container-xl .carousel .wish-icon {
     position: absolute;
     right: 10px;
@@ -312,13 +401,6 @@ html {
 
 /* start about */
 
-.card {
-    border: none;
-    box-shadow: 0 5px 5px 0 rgba(128, 128, 128, 0.232);
-}
-
-
-
 
 #about {
     background-color: whitesmoke;
@@ -326,9 +408,16 @@ html {
     padding-bottom: 60px;
 }
 
-#about .fa {
-    font-size: 3vw;
-    color: #17a2b8;
+.fa-users,
+.fa-rocket,
+.fa-star,
+.fa-money-bill-wave {
+    font-size: 35px;
+    color: #1d7886;
+}
+
+.bold {
+    font-weight: 800;
 }
 
 /* end about */
@@ -336,126 +425,47 @@ html {
 
 
 
-/* animated numbers */
 
 
-.counters {
-    background-color: whitesmoke;
-    color: black !important;
-    /* Push to bottom */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
+/* start video */
 
-.counters span {
-    font-size: 40px;
-}
-
-.counters h6 {
-    color: #17a2b8;
-}
-
-.counter {
-    display: inline-block;
-}
-
-
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    overflow: auto;
-}
-
-header {
-    flex: 1;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-header h1 {
-    font-size: 60px;
-}
-
-.counters {
-    color: #fff;
-    padding: 40px 20px;
-}
-
-.counters .container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 30px;
+#video {
+    background-color: #148ba9;
     text-align: center;
+    color: white;
 }
 
-.counters i {
-    color: lightskyblue;
-    margin-bottom: 5px;
-}
-
-.counters .counter {
-    font-size: 45px;
-    margin: 10px 0;
-}
-
-@media (max-width: 700px) {
-    .counters .container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .counters .container>div:nth-of-type(1),
-    .counters .container>div:nth-of-type(2) {
-        padding-bottom: 20px;
-    }
-}
-
-/* end animated numbers */
-
-
-/* start clients */
-
-.clients-text {
-    position: absolute;
-    top: 0;
+#laptop-frame {
     width: 100%;
     height: 100%;
-    background-color: violet;
+    max-width: 1034px;
+    max-height: 543px;
+    margin: 0 auto;
 }
 
-.myimg {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 50%;
+#laptop-frame div {
+    position: relative;
+    padding-top: 25px;
+    padding-bottom: 67.5%;
+    height: 0;
 }
 
-.quote {
-    font-style: italic;
-    font-weight: 400;
-
-}
-
-#clients .carousel-inner {
-    padding-top: 5%;
-    padding-bottom: 5%;
-    min-height: 250px;
-    background-color: #1b8899;
-}
-
-#clients .left-side {
+#laptop-frame div iframe {
+    box-sizing: border-box;
+    background: url("http://pedro.rosenpub.net//lightsail/images/laptop-frame3.png") center center no-repeat;
+    background-size: contain;
+    padding: 12.1% 14.4% 15.7%;
     position: absolute;
-    width: 50%;
-    left: 25%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
-/* end clients */
+
+
+
+/* end video */
 
 
 /* grid (services) */
@@ -468,19 +478,7 @@ header h1 {
 /* grid (services) */
 
 
-/* start consulting */
 
-#consulting {
-    background-color: whitesmoke;
-}
-
-.consulting-inner {
-    align-items: center;
-    padding-top: 5%;
-    padding-bottom: 5%;
-}
-
-/* end consulting */
 
 
 /* how we work */
@@ -492,10 +490,14 @@ header h1 {
 }
 
 .pic {
-    border: 1px solid rgba(32, 146, 175, 0.644);
+    border: 1px solid lightgray;
     width: 100%;
     height: 100%;
 
+}
+
+.pic h4 {
+    font-weight: 500;
 }
 
 .outline .pic img {
@@ -509,12 +511,12 @@ header h1 {
 
 .pic h1 {
     font-weight: 1000;
-    color: #17a2b8;
+    color: #148ba9;
 }
 
 
 .pic:hover {
-    background-color: #17a2b8;
+    background-color: #1d7886;
     color: white !important;
 }
 
@@ -530,35 +532,47 @@ header h1 {
 /* how we work */
 
 
-/* blog */
+/* contact */
 
-#blog {
-    background-color: whitesmoke;
-    padding-bottom: 100px;
+
+#contact p {
+    color: rgb(65, 63, 63);
 }
 
-.blog-item {
-    position: relative;
-    width: 400px;
-    height: 400px;
-    background-position: center;
+#contact {
+    min-height: 500px;
     background-size: cover;
+    background-position: center;
+    opacity: 0.9;
 }
 
-.inner-blog-data {
-    position: absolute;
-    width: 90%;
-    bottom: -50px;
-    background-color: white;
-    color: black;
-    box-shadow: 0 5px 5px 0 rgba(128, 128, 128, 0.418);
+.cloud {
+    width: 100%;
+    height: 100%;
+    min-height: 500px;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
-#blog button {
-    border-radius: 20px;
+.contact-header {
+    font-weight: 900;
+    font-size: 3.5vw;
+    color: gray;
 }
 
-/* blog */
+.rounded {
+    border-radius: 20px !important;
+}
+
+.contact-details {
+    padding-top: 20px;
+}
+
+/* contact*/
+
+
+
 
 
 .footer {
@@ -583,17 +597,43 @@ p {
     color: grey;
 }
 
+footer {
+    background-color: #1a1c20;
+    font-size: 0.9em;
+}
+
 #carouselExampleIndicators p,
 #clients p {
     color: rgb(231, 229, 229);
+}
+
+.footer p,
+.text-lightGrey {
+    color: rgb(212, 212, 212) !important;
+}
+
+
+.navbar-brand>img {
+    width: 100%;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
 }
 
 
 @media(max-width: 750px) {
 
 
-    .navbar-brand {
-        width: 60%;
+    .custom-link {
+        margin-top: 10px;
+        background-color: black;
+    }
+
+
+    .navbar-brand>img {
+        display: none;
     }
 
     .inner-blog-data {
@@ -635,7 +675,7 @@ p {
         display: flex;
     }
 
-    .right-side {
+    .right-side h6 {
         display: none;
     }
 
@@ -666,5 +706,35 @@ p {
         margin-bottom: -50px;
     }
 
+    #carouselExampleIndicators .carousel-indicators {
+        display: none;
+    }
+
+
+    #carouselExampleIndicators .carousel-control-prev,
+    #carouselExampleIndicators .carousel-control-next {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+
+
+    #carouselExampleIndicators img {
+        object-fit: cover;
+        object-position: center;
+        height: 100vh !important;
+    }
+
+    .left-side h1 {
+        text-align: center;
+    }
+
+    .text {
+        text-align: center;
+    }
+
+    footer {
+        text-align: center;
+    }
 
 }
